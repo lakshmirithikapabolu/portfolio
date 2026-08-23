@@ -69,7 +69,7 @@ function initTypewriter() {
 
   const roles = [
     "Frontend Developer",
-    "Public Speaker",
+    "Orator",
     "Toastmasters Orator Runner-Up",
     "Campus Ambassador @ E-Cell IIT Bombay",
     "Creative Problem Solver"

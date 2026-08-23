@@ -1444,7 +1444,7 @@ ul {
     gap: 2.5rem;
   }
   .hero-visual {
-    order: -1;
+    order: 2; /* Intro text comes first, code card comes second on mobile */
   }
   .about-box-compact {
     grid-template-columns: 1fr;
@@ -1455,11 +1455,60 @@ ul {
   .why-me-grid {
     grid-template-columns: 1fr;
   }
-  .contact-grid {
+  .contact-direct-grid {
     grid-template-columns: 1fr;
   }
   .footer-top {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 0.7rem 0 0.6rem 0;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.15);
+  }
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0 0.75rem;
+  }
+  .nav-brand {
+    font-size: 1.05rem;
+  }
+  .nav-menu {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.2rem 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-link {
+    font-size: 0.775rem;
+    padding: 0.2rem 0.25rem;
+  }
+  .mobile-toggle {
+    display: none !important;
+  }
+  .hero {
+    padding-top: calc(var(--nav-height) + 2.5rem);
   }
 }
 
@@ -1469,27 +1518,6 @@ ul {
   }
   .about-pills-grid {
     grid-template-columns: 1fr;
-  }
-  .nav-menu {
-    position: fixed;
-    top: var(--nav-height);
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: calc(100vh - var(--nav-height));
-    background: #000000;
-    border-left: 1px solid var(--border-subtle);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-  }
-  .nav-menu.open {
-    right: 0;
-  }
-  .mobile-toggle {
-    display: block;
   }
   .footer-top {
     grid-template-columns: 1fr;
