@@ -185,7 +185,7 @@ const projectsData = {
       "Clean, user-focused interface crafted with semantic HTML and modern styling"
     ],
     github: "https://github.com/lakshmirithikapabolu",
-    demo: "#"
+    demo: "https://deluxe-fox-8b98af.netlify.app"
   },
   geargo: {
     title: "Gear Go",
